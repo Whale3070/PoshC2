@@ -2,36 +2,36 @@
 
 ![Docker Image CI](https://github.com/nettitude/PoshC2/workflows/Docker%20Image%20CI/badge.svg?branch=master)
 
-PoshC2 is a proxy aware C2 framework used to aid penetration testers with red teaming, post-exploitation and lateral movement.
+PoshC2 是一个代理感知 C2 框架，用于帮助渗透测试人员进行红队、后期利用和横向移动。 
 
-PoshC2 is primarily written in Python3 and follows a modular format to enable users to add their own modules and tools, allowing an extendible and flexible C2 framework. Out-of-the-box PoshC2 comes PowerShell/C# and Python2/Python3 implants with payloads written in PowerShell v2 and v4, C++ and C# source code, a variety of executables, DLLs and raw shellcode in addition to a Python2/Python3 payload. These enable C2 functionality on a wide range of devices and operating systems, including Windows, *nix and OSX.
+PoshC2 主要用 Python3 编写，遵循模块化格式，使用户能够添加自己的模块和工具，从而实现可扩展且灵活的 C2 框架。 开箱即用的 PoshC2 带有 PowerShell/C# 和 Python2/Python3 植入程序，其中包含用 PowerShell v2 和 v4、C++ 和 C# 源代码编写的有效负载、各种可执行文件、DLL 和原始 shellcode，以及 Python2/Python3 有效负载。 这些在各种设备和操作系统上启用 C2 功能，包括 Windows、*nix 和 OSX。 
 
-Other notable features of PoshC2 include:
+PoshC2 的其他显着特点包括： 
 
-* Consistent and Cross-Platform support using Docker.
-* Highly configurable payloads, including default beacon times, jitter, kill dates, user agents and more.
-* A large number of payloads generated out-of-the-box which are frequently updated.
-* Shellcode containing in-build AMSI bypass and ETW patching for a high success rate and stealth.
-* Auto-generated Apache Rewrite rules for use in a C2 proxy, protecting your C2 infrastructure and maintaining good operational security.
-* A modular and extensible format allowing users to create or edit C#, PowerShell or Python3 modules which can be run in-memory by the Implants.
-* Notifications on receiving a successful Implant via Pushover or Slack.
-* A comprehensive and maintained contextual help and an intelligent prompt with contextual auto-completion, history and suggestions.
-* Fully encrypted communications, protecting the confidentiality and integrity of the C2 traffic even when communicating over HTTP.
-* Client/Server format allowing multiple team members to utilise a single C2 server.
-* Extensive logging. Every action and response is timestamped and stored in a database with all relevant information such as user, host, implant number etc. In addition to this the C2 server output is directly logged to a separate file.
-* PowerShell-less implants that do not use System.Management.Automation.dll using C# or Python2/Python3.
-* A free and open-source SOCKS Proxy using [SharpSocks](https://github.com/nettitude/SharpSocks)
-* HTTP(S) and SMB named-pipe comms for implants combined with Implant Daisy-chaining for reaching networks that do not have access to the internet
+* 使用 Docker 提供一致的跨平台支持。 
+* 高度可配置的有效负载，包括默认信标时间、抖动、终止日期、用户代理等。
+* 大量开箱即用的有效负载经常更新。 
+* Shellcode 包含内置 AMSI 绕过和 ETW 修补程序，可实现高成功率和隐蔽性。 
+* 自动生成的 Apache Rewrite 规则用于 C2 代理，保护您的 C2 基础架构并保持良好的操作安全性。 
+* 一种模块化和可扩展的格式，允许用户创建或编辑可以由 Implants 在内存中运行的 C#、PowerShell 或 Python3 模块。 
+* 通过 Pushover 或 Slack 接收成功植入的通知。 
+* 全面且维护的上下文帮助和带有上下文自动完成、历史记录和建议的智能提示。 
+* 完全加密的通信，即使在通过 HTTP 通信时也能保护 C2 流量的机密性和完整性。 
+* 客户端/服务器格式允许多个团队成员使用单个 C2 服务器。 
+* 广泛的日志记录。 每个动作和响应都带有时间戳，并与所有相关信息（例如用户、主机、植入物编号等）一起存储在数据库中。除此之外，C2 服务器输出直接记录到单独的文件中。 
+* 使用 C# 或 Python2/Python3 不使用 System.Management.Automation.dll 的无 PowerShell 植入程序。 
+* 使用 [SharpSocks](https://github.com/nettitude/SharpSocks) 的免费开源 SOCKS 代理 。
+* 使用HTTP(S) and SMB 命名管道，用于访问无法访问互联网的内网。
 
 ## Documentation
 
-We maintain PoshC2 documentation over at https://poshc2.readthedocs.io/en/latest/
+我们维护 PoshC2 文档 在 https://poshc2.readthedocs.io/en/latest/
 
 Find us on #Slack - [poshc2.slack.com](poshc2.slack.com) (to request an invite send an email to labs@nettitude.com)
 
 ## Install
 
-You can install PoshC2 directly or use the Docker images, instructions for both are below.
+您可以直接安装 PoshC2 或使用 Docker 映像，两者的说明如下。 
 
 ### Direct install on Kali hosts
 
